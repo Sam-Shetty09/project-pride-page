@@ -1,25 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Johnson - Full-Stack Developer Portfolio</title>
-    <meta name="description" content="Full-Stack Developer crafting beautiful digital experiences with React, Node.js, and modern technologies. View my projects and get in touch." />
-    <meta name="author" content="Alex Johnson" />
-    <meta name="keywords" content="Full-Stack Developer, React Developer, Node.js, TypeScript, Portfolio, Web Development" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <meta name="description" content="Full-stack developer portfolio showcasing web development projects and skills">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <meta property="og:title" content="Alex Johnson - Full-Stack Developer Portfolio" />
-    <meta property="og:description" content="Full-Stack Developer crafting beautiful digital experiences with React, Node.js, and modern technologies." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">Alex Johnson</span></h1>
+                <p>Full-Stack Developer</p>
+                <button class="cta-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate full-stack developer with experience in modern web technologies. I love creating efficient, scalable solutions and learning new technologies.</p>
+                        <div class="skills">
+                            <h3>Skills</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Web Calculator</h3>
+                        <p>A responsive calculator built with vanilla JavaScript</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Task Manager</h3>
+                        <p>Simple task management app with local storage</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Local Storage</span>
+                            <span>CSS Grid</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Python Data Analyzer</h3>
+                        <p>Data analysis tool using Python and pandas</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alex Johnson. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
